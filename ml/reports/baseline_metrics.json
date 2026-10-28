@@ -1,0 +1,53 @@
+{
+  "model_architecture": "TF-IDF (1-2 ngrams, max_features=10000) + LogisticRegression(class_weight='balanced')",
+  "model_file": "model.joblib",
+  "model_version": "v1.0.0-baseline-tfidf-lr",
+  "dataset": "SMS Spam Collection (UCI)",
+  "sample_counts": {
+    "validation_samples": 774,
+    "test_samples": 774
+  },
+  "probability_calibration": {
+    "is_calibrated": false,
+    "method": "raw_logistic_sigmoid",
+    "notes": "Probabilities represent uncalibrated logistic sigmoid outputs. Platt scaling or Isotonic Regression planned for Day 2 calibration."
+  },
+  "validation_metrics": {
+    "accuracy": 0.9806,
+    "precision_macro": 0.9576,
+    "recall_macro": 0.9536,
+    "f1_macro": 0.9556,
+    "f1_weighted": 0.9806,
+    "scam_precision": 0.9271,
+    "scam_recall": 0.9175,
+    "scam_f1": 0.9223,
+    "roc_auc": 0.9948,
+    "confusion_matrix": {
+      "true_negatives_legit": 670,
+      "false_positives_false_alarm": 7,
+      "false_negatives_missed_scam": 8,
+      "true_positives_detected_scam": 89
+    },
+    "false_positive_rate": 0.0103,
+    "false_negative_rate": 0.0825
+  },
+  "test_metrics": {
+    "accuracy": 0.9793,
+    "precision_macro": 0.9455,
+    "recall_macro": 0.9614,
+    "f1_macro": 0.9533,
+    "f1_weighted": 0.9795,
+    "scam_precision": 0.9,
+    "scam_recall": 0.9375,
+    "scam_f1": 0.9184,
+    "roc_auc": 0.9885,
+    "confusion_matrix": {
+      "true_negatives_legit": 668,
+      "false_positives_false_alarm": 10,
+      "false_negatives_missed_scam": 6,
+      "true_positives_detected_scam": 90
+    },
+    "false_positive_rate": 0.0147,
+    "false_negative_rate": 0.0625
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "feed_name": "ScamShield Threat Intelligence Test Fixture Snapshot",
+    "feed_type": "curated_test_fixtures",
+    "is_production_feed": false,
+    "source": "Synthetic test fixtures modeled after abuse.ch URLhaus & OpenPhish schemas using RFC 2606 and RFC 5737 reserved identifiers",
+    "retrieved_at": "2026-10-26T10:00:00Z",
+    "version": "1.0.0",
+    "license": "CC0 1.0 Universal / Public Domain",
+    "description": "Safe offline test fixtures using RFC 2606 example domains (.example.com, .example.org) and RFC 5737 test IP blocks (198.51.100.0/24) for safe testing without targeting real-world domains or creating network risk."
+  },
+  "entries": [
+    {
+      "pattern": "http://malware-drop.example.com/payload.exe",
+      "pattern_type": "exact_url",
+      "threat_type": "malware_distribution",
+      "confidence": 1.0,
+      "source": "URLhaus",
+      "reference_id": "UH-2026-1025-01"
+    },
+    {
+      "pattern": "phishing-bank-portal.example.com",
+      "pattern_type": "host",
+      "threat_type": "phishing",
+      "confidence": 1.0,
+      "source": "OpenPhish",
+      "reference_id": "OP-2026-1025-02"
+    },
+    {
+      "pattern": "credential-stealer.example.org",
+      "pattern_type": "apex_domain",
+      "threat_type": "credential_theft",
+      "confidence": 0.95,
+      "source": "URLhaus",
+      "reference_id": "UH-2026-1025-03"
+    },
+    {
+      "pattern": "verified-bad-site.com",
+      "pattern_type": "apex_domain",
+      "threat_type": "phishing",
+      "confidence": 0.99,
+      "source": "OpenPhish",
+      "reference_id": "OP-2026-1025-04"
+    },
+    {
+      "pattern": "http://198.51.100.23/botnet/c2",
+      "pattern_type": "exact_url",
+      "threat_type": "botnet_c2",
+      "confidence": 1.0,
+      "source": "URLhaus",
+      "reference_id": "UH-2026-1025-05"
+    }
+  ]
+}
